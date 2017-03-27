@@ -285,6 +285,7 @@
 				2E8F41DE1E87D64300801CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
