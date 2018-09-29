@@ -104,8 +104,10 @@ private extension PomodoroTimer {
     }
     
     private static func formatTime(seconds: TimeInterval) -> String {
-        let minutes = Int(seconds / 60)
-        let remainingSeconds = Int(seconds) % 60
-        return String(format:"%02d:%02d", minutes, remainingSeconds)
+        let positivityPrefix = seconds >= 0 ? "" : "-"
+        let absSeconds = abs(seconds)
+        let minutes = Int(absSeconds / 60)
+        let remainingSeconds = Int(absSeconds) % 60
+        return String(format:"%@%02d:%02d", positivityPrefix, minutes, remainingSeconds)
     }
 }
